@@ -1,8 +1,26 @@
-libs =
-#import libs += libhello%lib{hello}
+import libs = libtinystl%lib{tinystl}
+import libs += catch2%lib{catch2}
 
-./: exe{libtinystl-tests} doc{PACKAGE-README.md} legal{LICENSE} manifest
+# catch2 does not propagate cxx.export.poptions to this consumer.
+#
+import catch2_lib = catch2%lib{catch2}
+catch2_out_src = [dir_path] $directory($catch2_lib)
+our_src_root = $src_root
+source $directory($catch2_out_src)/build/bootstrap/src-root.build
+catch2_src_src = [dir_path] $src_root/src
+src_root = $our_src_root
 
-exe{libtinystl-tests}: {hxx cxx}{*} $libs
+cxx.poptions =+ "-I$out_root" "-I$src_root" \
+                "-I$catch2_out_src" "-I$catch2_src_src"
 
-cxx.poptions =+ "-I$out_root" "-I$src_root"
+./: exe{libtinystl-tests} doc{PACKAGE-README.md} legal{LICENSE} \
+    file{UnitTest++.h}@./ manifest
+
+file{UnitTest++.h}@./: install = false
+
+# Upstream test/main.cpp calls UnitTest::RunAllTests(). Replace it with a
+# packaging-only Catch2 session. UnitTest++.h is the Catch2 shim.
+#
+exe{libtinystl-tests}: cxx{main} test/cxx{** -main} $libs
+exe{libtinystl-tests}: test = true
+exe{libtinystl-tests}: install = false
