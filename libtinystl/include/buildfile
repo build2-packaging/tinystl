@@ -1,7 +1,7 @@
 intf_libs = # Interface dependencies.
 #import xxxx_libs += libhello%lib{hello}
 
-lib{tinystl}: TINYSTL/h{**} $intf_libs
+lib{tinystl}: TINYSTL/hxx{**} $intf_libs
 
 # Export options.
 #
@@ -16,7 +16,7 @@ lib{tinystl}:
 
 # Install recreating subdirectories.
 #
-TINYSTL/h{*}:
+TINYSTL/hxx{*}:
 {
   install         = include/
   install.subdirs = true
