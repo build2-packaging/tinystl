@@ -15,3 +15,4 @@ package-email: packaging@build2.org ; Mailing list.
 topics: stl, containers, header-only
 depends: * build2 >= 0.18.0
 depends: * bpkg >= 0.18.0
+tests: libtinystl-tests == $
