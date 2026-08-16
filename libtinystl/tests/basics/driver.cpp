@@ -1,34 +1,21 @@
-#include <sstream>
-#include <stdexcept>
-
-#include <tinystl/tinystl.h>
+#include <tinystl/string.h>
+#include <tinystl/vector.h>
 
 #undef NDEBUG
 #include <cassert>
 
 int main ()
 {
-  using namespace std;
-  using namespace tinystl;
+  tinystl::vector<int> v;
+  assert (v.empty ());
+  v.push_back (1);
+  v.push_back (2);
+  assert (v.size () == 2);
+  assert (v[0] == 1);
+  assert (v[1] == 2);
 
-  // Basics.
-  //
-  {
-    ostringstream o;
-    say_hello (o, "World");
-    assert (o.str () == "Hello, World!\n");
-  }
-
-  // Empty name.
-  //
-  try
-  {
-    ostringstream o;
-    say_hello (o, "");
-    assert (false);
-  }
-  catch (const invalid_argument& e)
-  {
-    assert (e.what () == string ("empty name"));
-  }
+  tinystl::string s ("ok");
+  assert (s.size () == 2);
+  assert (s[0] == 'o');
+  assert (s[1] == 'k');
 }
