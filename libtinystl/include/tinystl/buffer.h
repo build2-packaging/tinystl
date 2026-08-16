@@ -203,7 +203,7 @@ namespace tinystl {
 	static inline T* buffer_insert_common(buffer<T, Alloc>* b, T* where, size_t count) {
 		const size_t offset = (size_t)(where - b->first);
 		const size_t newsize = (size_t)((b->last - b->first) + count);
-		if (b->first + newsize > b->capacity)
+		if (!b->first || b->first + newsize > b->capacity)
 			buffer_reserve(b, (newsize * 3) / 2);
 
 		where = b->first + offset;

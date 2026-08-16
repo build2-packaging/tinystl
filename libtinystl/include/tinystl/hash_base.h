@@ -94,9 +94,9 @@ namespace tinystl {
 	}
 
 	template<typename Key, typename Value>
-	static inline pair<typename remove_reference<Key>::type, typename remove_reference<Value>::type>
+	static inline pair<typename remove_const_reference<Key>::type, typename remove_const_reference<Value>::type>
 	make_pair(Key&& key, Value&& value) {
-		return pair<typename remove_reference<Key>::type, typename remove_reference<Value>::type>(
+		return pair<typename remove_const_reference<Key>::type, typename remove_const_reference<Value>::type>(
 				  static_cast<Key&&>(key)
 				, static_cast<Value&&>(value)
 			);
