@@ -14,10 +14,9 @@ lib{tinystl}:
   cxx.export.libs = $intf_libs
 }
 
-# Install recreating subdirectories.
+# Install into include/TINYSTL/ so consumers keep writing <TINYSTL/vector.h>.
 #
 TINYSTL/hxx{*}:
 {
-  install         = include/
-  install.subdirs = true
+  install = include/TINYSTL/
 }
