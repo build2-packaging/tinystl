@@ -3,14 +3,15 @@ name: libtinystl
 version: 0.0.1-a.0.z
 type: lib,binless
 language: c++
-project: build2-tinystl
-summary: tinystl C++ library
-license: other: proprietary ; Not free/open source.
+project: tinystl
+summary: Core STL container and string C++ library
+license: BSD-2-Clause
 description-file: README.md
 package-description-file: PACKAGE-README.md
-url: https://example.org/upstream
-email: upstream@example.org
-package-url: https://github.com/build2-packaging/build2-tinystl
+url: https://github.com/mendsley/tinystl
+src-url: https://github.com/mendsley/tinystl
+package-url: https://github.com/build2-packaging/tinystl
 package-email: packaging@build2.org ; Mailing list.
+topics: stl, containers, header-only
 depends: * build2 >= 0.18.0
 depends: * bpkg >= 0.18.0
