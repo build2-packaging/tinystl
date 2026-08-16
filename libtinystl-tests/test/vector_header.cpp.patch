@@ -1,0 +1,8 @@
+--- vector_header.cpp.orig	2026-08-16 23:29:08
++++ vector_header.cpp	2026-08-17 12:14:09
+@@ -25,4 +25,4 @@
+  */
+ 
+ // Test that header is standalone
+-#include <TINYSTL/vector.h>
++#include <tinystl/vector.h>

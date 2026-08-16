@@ -1,0 +1,11 @@
+--- unordered_set_pod.cpp.orig	2026-08-16 23:29:08
++++ unordered_set_pod.cpp	2026-08-17 12:14:09
+@@ -24,7 +24,7 @@
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
+-#include <TINYSTL/unordered_set.h>
++#include <tinystl/unordered_set.h>
+ #include <UnitTest++.h>
+ 
+ TEST(uoset_pod_compiles) {

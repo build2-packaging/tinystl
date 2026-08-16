@@ -1,8 +1,5 @@
-libs =
-#import libs += libhello%lib{hello}
+./: {*/ -build/} doc{PACKAGE-README.md} legal{LICENSE} manifest
 
-./: exe{libtinystl-tests} doc{PACKAGE-README.md} legal{LICENSE} manifest
-
-exe{libtinystl-tests}: {hxx cxx}{*} $libs
-
-cxx.poptions =+ "-I$out_root" "-I$src_root"
+# Don't install tests.
+#
+test/: install = false

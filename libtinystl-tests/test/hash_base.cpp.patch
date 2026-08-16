@@ -1,0 +1,13 @@
+--- hash_base.cpp.orig	2026-08-16 23:29:08
++++ hash_base.cpp	2026-08-17 12:14:09
+@@ -24,8 +24,8 @@
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
+-#include <TINYSTL/hash_base.h>
+-#include <TINYSTL/string.h>
++#include <tinystl/hash_base.h>
++#include <tinystl/string.h>
+ #include <UnitTest++.h>
+ #include <utility>
+ 

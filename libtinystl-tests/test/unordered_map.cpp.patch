@@ -1,0 +1,13 @@
+--- unordered_map.cpp.orig	2026-08-16 23:29:08
++++ unordered_map.cpp	2026-08-17 12:14:09
+@@ -24,8 +24,8 @@
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
+-#include <TINYSTL/unordered_map.h>
+-#include <TINYSTL/string.h>
++#include <tinystl/unordered_map.h>
++#include <tinystl/string.h>
+ #include <UnitTest++.h>
+ #include <utility>
+ 

@@ -1,0 +1,11 @@
+--- string.cpp.orig	2026-08-16 23:29:08
++++ string.cpp	2026-08-17 12:14:09
+@@ -24,7 +24,7 @@
+  * POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
+-#include <TINYSTL/string.h>
++#include <tinystl/string.h>
+ #include <UnitTest++.h>
+ #include <string.h>
+ #include <utility>

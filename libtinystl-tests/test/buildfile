@@ -1,0 +1,9 @@
+import libs = libtinystl%lib{tinystl} \
+              catch2%lib{catch2}
+
+# Upstream test/main.cpp calls UnitTest::RunAllTests(). Replace it with a
+# packaging-only Catch2 session. UnitTest++.h is the Catch2 shim.
+#
+exe{libtinystl-tests}: {hxx cxx}{*} $libs
+
+cxx.poptions =+ "-I$src_base"
