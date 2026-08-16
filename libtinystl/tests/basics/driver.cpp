@@ -16,6 +16,6 @@ int main ()
 
   tinystl::string s ("ok");
   assert (s.size () == 2);
-  assert (s[0] == 'o');
-  assert (s[1] == 'k');
+  assert (s.c_str ()[0] == 'o');
+  assert (s.c_str ()[1] == 'k');
 }
