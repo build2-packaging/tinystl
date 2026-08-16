@@ -1,9 +1,12 @@
-# libtinystl-tests - An executable
+# libtinystl-tests - Tests for the libtinystl C++ library
 
-This is a `build2` package for the [`<UPSTREAM-NAME>`](https://<UPSTREAM-URL>)
-executable. It is a <SUMMARY-OF-FUNCTIONALITY>.
+This is a `build2` test package for
+[tinystl](https://github.com/mendsley/tinystl). It runs the upstream unit
+tests on Catch2 v3. A packaging-only `UnitTest++.h` shim maps the original
+`TEST()`/`CHECK()` macros so the test sources stay unmodified.
 
-Note that the `libtinystl-tests` executable in this package provides `build2` metadata.
+It is pulled in automatically when you test `libtinystl` (via the `tests:`
+manifest field). You do not need to depend on this package directly.
 
 
 ## Usage
@@ -13,14 +16,17 @@ To start using `libtinystl-tests` in your project, add the following build-time
 appropriate:
 
 ```
-depends: * libtinystl-tests ^<VERSION>
+depends: * libtinystl-tests ^0.0.1
 ```
 
 Then import the executable in your `buildfile`:
 
 ```
-import! [metadata] <TARGET> = libtinystl-tests%exe{<TARGET>}
+import driver = libtinystl-tests%exe{libtinystl-tests}
 ```
+
+Typical consumers should depend on `libtinystl` instead and let `bpkg test`
+bring this package in.
 
 
 ## Importable targets
@@ -28,18 +34,12 @@ import! [metadata] <TARGET> = libtinystl-tests%exe{<TARGET>}
 This package provides the following importable targets:
 
 ```
-exe{<TARGET>}
+exe{libtinystl-tests}
 ```
 
-<DESCRIPTION-OF-IMPORTABLE-TARGETS>
+This is the Catch2 test driver for `libtinystl`. It is not installed.
 
 
 ## Configuration variables
 
-This package provides the following configuration variables:
-
-```
-[bool] config.libtinystl_tests.<VARIABLE> ?= false
-```
-
-<DESCRIPTION-OF-CONFIG-VARIABLES>
+This package has no configuration variables.
