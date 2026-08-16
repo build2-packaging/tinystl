@@ -1,0 +1,13 @@
+--- hash_base.h.orig	2026-08-17 12:12:31
++++ hash_base.h	2026-08-17 12:14:06
+@@ -27,8 +27,8 @@
+ #ifndef TINYSTL_HASH_BASE_H
+ #define TINYSTL_HASH_BASE_H
+ 
+-#include <TINYSTL/stddef.h>
+-#include <TINYSTL/traits.h>
++#include <tinystl/stddef.h>
++#include <tinystl/traits.h>
+ 
+ namespace tinystl {
+ 

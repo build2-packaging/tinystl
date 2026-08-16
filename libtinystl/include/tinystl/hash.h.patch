@@ -1,0 +1,11 @@
+--- hash.h.orig	2026-08-17 12:12:31
++++ hash.h	2026-08-17 12:14:06
+@@ -27,7 +27,7 @@
+ #ifndef TINYSTL_STRINGHASH_H
+ #define TINYSTL_STRINGHASH_H
+ 
+-#include <TINYSTL/stddef.h>
++#include <tinystl/stddef.h>
+ 
+ namespace tinystl {
+ 

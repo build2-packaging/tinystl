@@ -1,0 +1,11 @@
+--- string_view.h.orig	2026-08-17 12:12:31
++++ string_view.h	2026-08-17 12:14:06
+@@ -27,7 +27,7 @@
+ #ifndef TINYSTL_STRING_VIEW_H
+ #define TINYSTL_STRING_VIEW_H
+ 
+-#include <TINYSTL/stddef.h>
++#include <tinystl/stddef.h>
+ 
+ namespace tinystl {
+ 
