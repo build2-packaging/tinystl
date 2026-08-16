@@ -1,0 +1,8 @@
+libs =
+#import libs += libhello%lib{hello}
+
+./: exe{libtinystl-tests} doc{PACKAGE-README.md} legal{LICENSE} manifest
+
+exe{libtinystl-tests}: {hxx cxx}{*} $libs
+
+cxx.poptions =+ "-I$out_root" "-I$src_root"
