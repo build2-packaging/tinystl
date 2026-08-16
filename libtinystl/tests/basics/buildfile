@@ -1,0 +1,3 @@
+import libs = libtinystl%lib{tinystl}
+
+exe{driver}: {hxx cxx}{**} $libs testscript{**}
