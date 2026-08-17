@@ -1,6 +1,6 @@
 : 1
 name: libtinystl-tests
-version: 0.0.1-a.0.z
+version: 0.0.1
 type: exe
 language: c++
 project: tinystl
