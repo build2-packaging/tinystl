@@ -1,5 +1,18 @@
 --- buffer.h.orig	2026-08-16 23:29:08
-+++ buffer.h	2026-08-16 23:31:06
++++ buffer.h	2026-08-17 12:04:05
+@@ -27,9 +27,9 @@
+ #ifndef TINYSTL_BUFFER_H
+ #define TINYSTL_BUFFER_H
+ 
+-#include <TINYSTL/allocator.h>
+-#include <TINYSTL/new.h>
+-#include <TINYSTL/traits.h>
++#include <tinystl/allocator.h>
++#include <tinystl/new.h>
++#include <tinystl/traits.h>
+ 
+ namespace tinystl {
+ 
 @@ -203,7 +203,7 @@
  	static inline T* buffer_insert_common(buffer<T, Alloc>* b, T* where, size_t count) {
  		const size_t offset = (size_t)(where - b->first);

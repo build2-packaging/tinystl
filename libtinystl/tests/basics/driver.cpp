@@ -1,5 +1,5 @@
-#include <TINYSTL/string.h>
-#include <TINYSTL/vector.h>
+#include <tinystl/string.h>
+#include <tinystl/vector.h>
 
 #undef NDEBUG
 #include <cassert>

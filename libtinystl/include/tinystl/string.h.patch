@@ -1,5 +1,18 @@
 --- string.h.orig	2026-08-16 23:29:08
-+++ string.h	2026-08-16 23:31:37
++++ string.h	2026-08-17 12:04:05
+@@ -27,9 +27,9 @@
+ #ifndef TINYSTL_STRING_H
+ #define TINYSTL_STRING_H
+ 
+-#include <TINYSTL/allocator.h>
+-#include <TINYSTL/stddef.h>
+-#include <TINYSTL/hash.h>
++#include <tinystl/allocator.h>
++#include <tinystl/stddef.h>
++#include <tinystl/hash.h>
+ 
+ namespace tinystl {
+ 
 @@ -66,7 +66,7 @@
  		pointer m_capacity;
  

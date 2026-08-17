@@ -1,0 +1,11 @@
+--- allocator.h.orig	2026-08-16 23:29:08
++++ allocator.h	2026-08-17 12:04:05
+@@ -27,7 +27,7 @@
+ #ifndef TINYSTL_ALLOCATOR_H
+ #define TINYSTL_ALLOCATOR_H
+ 
+-#include <TINYSTL/stddef.h>
++#include <tinystl/stddef.h>
+ 
+ namespace tinystl {
+ 

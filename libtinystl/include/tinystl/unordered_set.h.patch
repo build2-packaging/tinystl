@@ -1,5 +1,20 @@
 --- unordered_set.h.orig	2026-08-16 23:29:08
-+++ unordered_set.h	2026-08-16 23:31:37
++++ unordered_set.h	2026-08-17 12:04:05
+@@ -27,10 +27,10 @@
+ #ifndef TINYSTL_UNORDERED_SET_H
+ #define TINYSTL_UNORDERED_SET_H
+ 
+-#include <TINYSTL/allocator.h>
+-#include <TINYSTL/buffer.h>
+-#include <TINYSTL/hash.h>
+-#include <TINYSTL/hash_base.h>
++#include <tinystl/allocator.h>
++#include <tinystl/buffer.h>
++#include <tinystl/hash.h>
++#include <tinystl/hash_base.h>
+ 
+ namespace tinystl {
+ 
 @@ -78,7 +78,6 @@
  		: m_size(0)
  	{

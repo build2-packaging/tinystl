@@ -1,0 +1,11 @@
+--- test/string_resize.cpp.orig	2026-08-16 23:29:08
++++ test/string_resize.cpp	2026-08-17 12:05:33
+@@ -24,7 +24,7 @@
+  * POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
+-#include <TINYSTL/string.h>
++#include <tinystl/string.h>
+ #include <UnitTest++.h>
+ #include <string.h>
+ 

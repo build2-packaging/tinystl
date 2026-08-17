@@ -1,0 +1,13 @@
+--- test/unordered_set.cpp.orig	2026-08-16 23:29:08
++++ test/unordered_set.cpp	2026-08-17 12:05:33
+@@ -24,8 +24,8 @@
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
+-#include <TINYSTL/unordered_set.h>
+-#include <TINYSTL/string.h>
++#include <tinystl/unordered_set.h>
++#include <tinystl/string.h>
+ #include <UnitTest++.h>
+ #include <utility>
+ 

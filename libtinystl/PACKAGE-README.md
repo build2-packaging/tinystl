@@ -36,7 +36,9 @@ lib{tinystl}
 ```
 
 This is a binless (header-only) library. Public headers are included as
-`<TINYSTL/vector.h>` etc.
+`<tinystl/vector.h>` etc. This matches the bx/bgfx include style and the
+FreeBSD `graphics/bgfx` port. Upstream mendsley sources live in
+`include/TINYSTL/`.
 
 
 ## Configuration variables
