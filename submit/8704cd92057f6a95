@@ -1,0 +1,8 @@
+: 1
+name: libtinystl
+version: 0.0.1
+type: lib,binless
+language: c++
+project: tinystl
+summary: Core STL container and string C++ library
+license: BSD-2-Clause
